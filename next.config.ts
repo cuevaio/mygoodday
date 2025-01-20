@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'd2eawub7utcl6.cloudfront.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      },
     ],
   },
 };
