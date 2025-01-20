@@ -2,20 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 35 25% 95%;
+    --foreground: 30 20% 10%;
+    --card: 50 20% 90%;
+    --card-foreground: 30 20% 15%;
+    --popover: 60 20% 85%;
+    --popover-foreground: 30 20% 15%;
+    --primary: 30 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 15 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 35 25% 85%;
+    --muted-foreground: 30 10% 10%;
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 20% 70%;
+    --input: 0 0% 100%;
+    --ring: 30 60% 70%;
+    --chart-1: 0 0% 50%;
+    --chart-2: 50 70% 40%;
+    --chart-3: 30 60% 60%;
+    --chart-4: 15 90% 40%;
+    --chart-5: 10 100% 50%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 30 20% 15%;
+    --foreground: 0 0% 90%;
+    --card: 35 20% 20%;
+    --card-foreground: 0 0% 90%;
+    --popover: 30 20% 25%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 30 60% 60%;
+    --primary-foreground: 0 0% 15%;
+    --secondary: 15 60% 60%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 30 20% 20%;
+    --muted-foreground: 0 0% 90%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 30 20% 10%;
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 0 0% 90%;
+    --border: 30 20% 30%;
+    --input: 30 50% 20%;
+    --ring: 30 60% 50%;
+    --chart-1: 0 0% 70%;
+    --chart-2: 50 30% 50%;
+    --chart-3: 30 50% 70%;
+    --chart-4: 15 80% 60%;
+    --chart-5: 10 100% 80%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
