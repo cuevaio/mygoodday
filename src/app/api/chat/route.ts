@@ -17,9 +17,6 @@ import { getMessages, storeMessages } from '@/db/redis';
 export const maxDuration = 30;
 
 export async function GET(req: Request) {
-  // Simulate a 5 second delay
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
   const { userId } = await auth();
 
   if (!userId) {
